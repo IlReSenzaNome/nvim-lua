@@ -1,5 +1,7 @@
--- Basic files configuration
+----------------------------
+-- Import Lua Modules
+---------------------------- 
 require("config.settings")
 require("config.keymaps")
--- Plugins
 require("config.lazy")
+----------------------------
