@@ -4,6 +4,13 @@ return {
 	priority = 1000,
 	config = function()
 		-- Load the colorscheme here
-		vim.cmd([[colorscheme tokyonight]])
+
+		require("tokyonight").setup({
+			-- your configuration here
+			style = "moon",
+			light_style = "storm",
+			transparent = false,
+			terminal_colors = true,
+		})
 	end,
-} 
+}
