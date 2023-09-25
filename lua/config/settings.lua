@@ -13,7 +13,7 @@ local ag = vim.api.nvim_create_augroup -- Create autogroup
 -- NeoVim General config
 --------------------------------------
 g.mapleader = " "              -- leader to space
-opt.clipboard = 'unnamedplus'  -- Copy/Paste to sytem clipboard 
+-- opt.clipboard = 'unnamedplus'  -- Copy/Paste to sytem clipboard 
 opt.swapfile = false           -- Don't use swapfile
 
 --------------------------------------

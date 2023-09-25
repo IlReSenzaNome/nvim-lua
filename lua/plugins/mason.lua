@@ -1,4 +1,22 @@
 return {
     "williamboman/mason.nvim",
-    config = true,
+    opts = {
+        ensue_installed = {
+            "stylua",
+            "shellcheck",
+            "shfml",
+            "flake8",
+        },
+    },
+    init = function()
+        require("mason").setup({
+            ui = {
+                icons = {
+                    package_installed = "✓",
+                    package_pending = "➜",
+                    package_uninstalled = "✗"
+                },
+            },
+        })
+    end,
 }
