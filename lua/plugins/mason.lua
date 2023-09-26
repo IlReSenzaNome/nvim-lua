@@ -1,22 +1,22 @@
 return {
-    "williamboman/mason.nvim",
-    opts = {
-        ensue_installed = {
-            "stylua",
-            "shellcheck",
-            "shfml",
-            "flake8",
-        },
+    {
+        "folke/null-ls.nvim",
+        opts = function(_, opts)
+            local nls = require("null-ls")
+        end,
     },
-    init = function()
-        require("mason").setup({
-            ui = {
-                icons = {
-                    package_installed = "✓",
-                    package_pending = "➜",
-                    package_uninstalled = "✗"
+    {
+        "williamboman/mason.nvim",
+        opts = function(_, opts)
+            require("mason").setup({
+                ui = {
+                    icons = {
+                        package_installed = "✓",
+                        package_pending = "➜",
+                        package_uninstalled = "✗"
+                    },
                 },
-            },
-        })
-    end,
+            })
+        end,
+    },
 }

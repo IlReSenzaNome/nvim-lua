@@ -1,11 +1,17 @@
 return {
 	"folke/tokyonight.nvim",
-	lazy = false,
+	lazy = true,
+    name = "tokyonight",
 	priority = 1000,
+    opts = {
+         integrations = {
+             lsp_trouble = true,
+             mason = true,
+         },
+         style = "moom",
+         terminal_colors = true,
+    },
     init = function()
-        vim.g.tokyonight_style = "moon"
-    end,
-    config = function()
-        vim.cmd.colorscheme "tokyonight"
+        vim.cmd[[colorscheme tokyonight]]
     end,
 }

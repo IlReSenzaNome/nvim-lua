@@ -1,15 +1,14 @@
 return {
 	"nvim-lualine/lualine.nvim",
-	dependencies = { "kyazdani42/nvim-web-devicons" },
 	config = function()
-		require("lualine").setup({
+        require("lualine").setup({
 			options = {
 				theme = "tokyonight",
 				icons_enabled = true,
 				globalstatus = true,
 			},
 			sections = {
-				lualine_a = { { "mode", upper = true } },
+				lualine_a = { { 'mode', upper = true, icon = ""} }, -- e712 dos = '',  -- e70f mac = '',  -- e711
 				lualine_b = { { "branch", icon = "" }, "db_ui#statusline" },
 				lualine_c = { { "filename", file_status = true, path = 1 } },
 				lualine_x = {},
