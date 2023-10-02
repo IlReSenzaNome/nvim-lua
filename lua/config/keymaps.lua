@@ -18,4 +18,14 @@ map('i', '<C-j>', '<down>', default_opts)
 map('i', '<C-k>', '<up>', default_opts)
 map('i', '<C-l>', '<right>', default_opts)
 -- Save File
-map('n', '<C-s>', ':w', default_opts)
+map('n', '<C-S>', ':w<cr>', default_opts)
+map('v', '<C-S>', '<esc>:w<cr>', default_opts)
+map('i', '<C-S>', '<esc>:w<cr>', default_opts)
+-- bufferline
+map('n','<Tab>', ':BufferLineCycleNext<cr>', default_opts)
+map('n', '<S-tab>', ':BufferLineCyclePrev<cr>', default_opts)
+-- Neo-tree
+map('n', '<C-T>', ':NeoTreeFloatToggle<cr>', default_opts)
+map('i', '<C-T>', ':NeoTreeFloatToggle<cr>', default_opts)
+map('v', '<C-T>', ':NeoTreeFloatToggle<cr>', default_opts)
+map('n', '<C-C>', ':NeoTreeClose<cr>', default_opts)
