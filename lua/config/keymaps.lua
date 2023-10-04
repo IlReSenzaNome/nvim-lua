@@ -16,10 +16,10 @@ map('', '<right>', '<nop>', {noremap = true})
 -----------------------------------
 -- Iser mode movement
 -----------------------------------
-map('i', '<C-h>', '<left>', default_opts)
-map('i', '<C-j>', '<down>', default_opts)
-map('i', '<C-k>', '<up>', default_opts)
-map('i', '<C-l>', '<right>', default_opts)
+map('i', '<M-h>', '<left>', default_opts)
+map('i', '<M-j>', '<down>', default_opts)
+map('i', '<M-k>', '<up>', default_opts)
+map('i', '<M-l>', '<right>', default_opts)
 -----------------------------------
 -- Save File
 -----------------------------------
@@ -51,7 +51,7 @@ map('n', '<leader>l', ':Lazy<cr>', default_opts)
 -- Tmux
 ------------------------------------
 map('t', '<C-E>', '<C-\\><C-n>', default_opts)
-map('n', '<S-E>', ':TmuxNavigateLeft<cr>', default_opts)
-map('n', '<s-F>', ':TmuxNavigateRight<cr>', default_opts)
-map('n', '<S-A>', ':TmuxNavigateUp<cr>', default_opts)
-map('n', '<S-B>', ':TmuxNavigateDown<cr>', default_opts)
+map('n', '<C-H>', ':TmuxNavigateLeft<cr>', default_opts)
+map('n', '<C-L>', ':TmuxNavigateRight<cr>', default_opts)
+map('n', '<C-K>', ':TmuxNavigateUp<cr>', default_opts)
+map('n', '<C-J>', ':TmuxNavigateDown<cr>', default_opts)
