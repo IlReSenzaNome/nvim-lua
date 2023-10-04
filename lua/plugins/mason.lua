@@ -1,6 +1,9 @@
 return {
     {
         "folke/null-ls.nvim",
+        keys = {
+            {"<leader>q", desc = "Null"},
+        },
         opts = function(_, opts)
             local nls = require("null-ls")
         end,
@@ -18,5 +21,8 @@ return {
                 },
             })
         end,
+        keys = {
+            {"<leader>m", ":Mason<cr>", desc = "Open mason"}
+        }
     },
 }

@@ -16,7 +16,7 @@ vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
     {
-        opts = {},
+        theme = 'tokyonight',
     },
 	spec = {
 		-- Add LazyVim and import its plugins
