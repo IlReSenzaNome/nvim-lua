@@ -55,3 +55,7 @@ map('n', '<C-H>', ':TmuxNavigateLeft<cr>', default_opts)
 map('n', '<C-L>', ':TmuxNavigateRight<cr>', default_opts)
 map('n', '<C-K>', ':TmuxNavigateUp<cr>', default_opts)
 map('n', '<C-J>', ':TmuxNavigateDown<cr>', default_opts)
+-------------------------------------
+-- Reload configuration without restart nvim
+-------------------------------------
+map('n', '<F5>', ':so %<cr>', default_opts)
