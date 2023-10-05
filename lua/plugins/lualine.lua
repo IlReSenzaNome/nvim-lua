@@ -1,5 +1,6 @@
 return {
 	"nvim-lualine/lualine.nvim",
+    event = "VeryLazy",
 	config = function()
         require("lualine").setup({
 			options = {
@@ -8,10 +9,18 @@ return {
 				globalstatus = true,
 			},
 			sections = {
-			    lualine_a = { { 'mode', upper = true, icon = ""} }, -- e712 dos = '',  -- e70f mac = '',  -- e711
+				lualine_a = { { 'mode', upper = true, icon = ""} }, -- e712 dos = '',  -- e70f mac = '',  -- e711
 				lualine_b = { { "branch", icon = "" }, "db_ui#statusline" },
 				lualine_c = { { "filename", file_status = true, path = 1 } },
-				lualine_x = {},
+				lualine_x = { 
+                    {
+				        "diagnostics",
+				        sources = { "nvim_diagnostic" },
+				        symbols = { error = " ", warn = " ", info = " ", hint = " " },
+			        },
+			        "encoding",
+			        "filetype", 
+                },
 				lualine_y = { "filetype" },
 				lualine_z = { "location" },
 			},
@@ -31,7 +40,6 @@ return {
 				lualine_y = {},
 				lualine_z = {},
 			},
-            extensions = { 'fugitive', 'neotree'}
 		})
 	end,
 }

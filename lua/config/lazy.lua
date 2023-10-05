@@ -15,8 +15,29 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
-    {
-        theme = 'tokyonight',
+    install = {
+        missing = true,
+        colorscheme = { "tokyonight" },
+    },
+    ui = {
+        icons = {
+            cmd = " ",
+            config = "",
+            event = "",
+            ft = " ",
+            init = " ",
+            import = " ",
+            keys = " ",
+            lazy = "󰒲 ",
+            loaded = "●",
+            not_loaded = "○",
+            plugin = " ",
+            runtime = " ",
+            source = " ",
+            start = "",
+            task = "✔ ",
+            list = { "●", "➜", "★", "‒", },
+        },
     },
 	spec = {
 		-- Add LazyVim and import its plugins

@@ -22,7 +22,7 @@ return {
             })
         end,
         keys = {
-            {"<leader>m", ":Mason<cr>", desc = "Open mason"}
+            {"<leader>cm", ":Mason<cr>", desc = "Open mason"}
         }
     },
 }

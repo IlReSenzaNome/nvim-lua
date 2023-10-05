@@ -1,5 +1,6 @@
 return {
     'terrortylor/nvim-comment',
+    event = "VeryLazy",
     lazy = false,
     opts = {},
     config = function()

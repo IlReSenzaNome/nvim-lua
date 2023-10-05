@@ -31,6 +31,7 @@ map('i', '<C-S>', '<esc>:w<cr>', default_opts)
 -----------------------------------
 map('n','<Tab>', ':BufferLineCycleNext<cr>', default_opts)
 map('n', '<S-tab>', ':BufferLineCyclePrev<cr>', default_opts)
+map('n', '<C-x>', ':bdelete<cr>', default_opts)
 -----------------------------------
 -- Neo-tree
 -----------------------------------
