@@ -19,16 +19,34 @@ opt.swapfile = false           -- Don't use swapfile
 --------------------------------------
 -- NeoVim Interfaces
 --------------------------------------
-opt.number = true
-opt.relativenumber = true
+opt.number = true              -- shows absolute line number on cursor line 
+opt.relativenumber = true      -- show relative line numbers
 
 --------------------------------------
 -- Tabs, Ident
 --------------------------------------
 opt.expandtab = true           -- Use spaces Instead of tabs
-opt.shiftwidth = 4             -- Shift 4 spaces when tab
-opt.tabstop = 4                -- 1 Tab == 4 Spaces
+opt.shiftwidth = 2             -- Shift 4 spaces when tab
+opt.tabstop = 2                -- 1 Tab == 4 Spaces
 opt.smartindent = true         -- autoindent now lines 
+opt.autoindent = true          -- copy ident from current line when starting new one
+
+-------------------------------------
+-- Line Wrapping
+-------------------------------------
+opt.wrap = false               -- desable line Wrapping
+
+-------------------------------------
+-- Search Settings 
+-------------------------------------
+opt.ignorecase = true          -- Ignore case when searching
+opt.smartcase = true           -- If you include mised case in your search, assumes you want case-sesitive
+
+-------------------------------------
+-- Appearence 
+-------------------------------------
+opt.termguicolors = true        -- Enable termguicolors for use tokyonight
+opt.background = "dark"         -- Colorscheme that can be light or dark will be made dark
 
 --------------------------------------
 -- Spell

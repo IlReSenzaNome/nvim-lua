@@ -6,7 +6,7 @@ return {
       config = true,
       theme = 'tokyonight',
       dependencies = {
-          'christoomey/vim-tmux-navigator',
+        'christoomey/vim-tmux-navigator',
       },
       keys = {
           {"<leader>ot", ":ToggleTerm size=40 dir=git_dir direction=vertical name=git_dir<cr>", desc = "Open a Toggle Term"},

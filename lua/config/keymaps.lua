@@ -36,7 +36,7 @@ map('n', '<C-x>', ':bdelete<cr>', default_opts)
 -- Neo-tree
 -----------------------------------
 map('n', '<leader>t', ':NeoTreeFloatToggle<cr>', default_opts)
-map('v', '<leader>t', ':NeoTreeFloatToggle<cr>', default_opts)
+map('v', '<leader>t', ':NeoTreeFloatToogle<cr>', default_opts)
 map('n', '<C-C>', ':NeoTreeClose<cr>', default_opts)
 map('v', '<C-C>', ':NeoTreeClose<cr>', default_opts)
 ------------------------------------
