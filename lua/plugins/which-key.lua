@@ -5,8 +5,9 @@ return {
         vim.o.timeout = true
         vim.o.timeoutlen = 300
         local wk = require("which-key")
-        wk.register({}, { prefix = "<leader>o", name = "+open"})
+        wk.register({}, { prefix = "<leader>o", name = "+Open"})
         wk.register({}, { prefix = "<leader>g", name = "+Git"})
+        wk.register({}, { prefix = "<leader>f", name = "+Telescop"})
     end,
     opts = {
         mdoe = "n",
