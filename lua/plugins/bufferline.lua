@@ -34,8 +34,8 @@ return {
     config = function(_, opts)
       require("bufferline").setup(opts)
       vim.api.nvim_create_autocmd("BufAdd", {
-        callback = function()
-          vim.schedule(function()
+        callback = function ()
+          vim.schedule(function ()
             pacall(nvim_bufferline)
           end)
         end,
