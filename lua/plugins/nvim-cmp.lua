@@ -10,7 +10,7 @@ return {
       "L3MON4D3/LuaSnip",
       "saadparwaiz1/cmp_luasnip",
     },
-    event = { "VeryLazy", "InsertEnter" },
+    event = "InsertEnter",
     main = "config.plugins.cmp",
     config = true,
   },
