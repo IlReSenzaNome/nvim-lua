@@ -39,6 +39,53 @@ function M.setup()
       { name = "luasnip" },
       { name = "buffer" },
     },
+    formatting = {
+      format = function(entry, vim_item)
+        -- Usa nvim-web-devicons para obtener íconos por el tipo de archivo
+        local kind_icons = {
+          Text = "",
+          Method = "m",
+          Function = "",
+          Constructor = "",
+          Field = "",
+          Variable = "",
+          Class = "",
+          Interface = "",
+          Module = "",
+          Property = "",
+          Unit = "",
+          Value = "",
+          Enum = "",
+          Keyword = "",
+          Snippet = "",
+          Color = "",
+          File = "",
+          Reference = "",
+          Folder = "",
+          EnumMember = "",
+          Constant = "",
+          Struct = "",
+          Event = "",
+          Operator = "",
+          TypeParameter = ""
+        }
+        -- Configura íconos aquí para cada fuente
+        local source_icons = {
+          buffer = "﬘",
+          nvim_lsp = "",
+          path = "ﱮ",
+          luasnip = "", -- Asumiendo que quieres un ícono de snippet para LuaSnip
+        }
+  
+        vim_item.kind = string.format('%s', kind_icons[vim_item.kind] or '') .. vim_item.kind
+        -- Agrega el ícono de la fuente
+        if source_icons[entry.source.name] then
+          vim_item.menu = source_icons[entry.source.name]
+        end
+  
+        return vim_item
+      end,
+    },
   })
 
   cmp.event:on("confirm_done", cmp_autopairs.on_confirm_done { map_char = { tex = "" } })

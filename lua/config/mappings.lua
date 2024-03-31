@@ -65,7 +65,7 @@ map("n", "<leader>l", "<cmd>Lazy<cr>", default_opts)
 -------------------------------------
 -- Tmux
 -------------------------------------
--- map("t", "<C-E>", "<C-\\><C-n>", default_opts)
+map("t", "<C-x>", "<C-\\><C-N>", {desc = "Terminal Escape terminal mode"})
 -- map("n", "<C-H>", "<cmd>TmuxNavigateLeft<cr>", default_opts)
 -- map("n", "<C-L>", "<cmd>TmuxNavigateRight<cr>", default_opts)
 -- map("n", "<C-K>", "<cmd>TmuxNavigateUp<cr>", default_opts)

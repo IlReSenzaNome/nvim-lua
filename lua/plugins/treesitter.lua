@@ -1,6 +1,9 @@
 return {
 {
     "nvim-treesitter/nvim-treesitter",
+    build = ":TSUpdate",
+    event = "VeryLazy",
+    main = "nvim-treesitter.configs",
     opts = {
       ensure_installed = {
         "vim",
@@ -12,11 +15,18 @@ return {
         "typescript",
         "tsx",
         "c",
+        "cpp",
 	      "rust",
 	      "svelte",
 	      "cpp",
 	      "python",
 	      "yaml"
+      },
+      highlight = {
+        enable = true,
+      },
+      indent = {
+        enable = true,
       },
     },
 },

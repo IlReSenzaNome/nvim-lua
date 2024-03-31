@@ -23,8 +23,8 @@ return {
         end,
         offsets = {
           {
-            filetype = "neo-tree",
-            text = "Neo-tree",
+            filetype = "nvim-tree",
+            text = "Nvim-tree",
             highlight = "Directory",
             text_align = "left",
           },
@@ -36,7 +36,6 @@ return {
       vim.api.nvim_create_autocmd("BufAdd", {
         callback = function ()
           vim.schedule(function ()
-            pacall(nvim_bufferline)
           end)
         end,
       })
