@@ -42,9 +42,6 @@ return {
     dependencies = {
       "folke/twilight.nvim",
     } ,
-    keys = {
-      {"<leader>oz", ":ZenMode<cr>", desc = "Open ZenMode"},
-    },
     opts = {},
   },
   {
@@ -53,4 +50,17 @@ return {
     event = "VeryLazy",
     opts = {},
   },
+  {
+    "stevearc/dressing.nvim",
+    config = true,
+  },
+  {
+  'nvimdev/dashboard-nvim',
+  event = 'VimEnter',
+  config = function()
+    require('dashboard').setup {
+      -- config
+    }
+  end,
+}
 }

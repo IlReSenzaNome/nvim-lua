@@ -14,7 +14,6 @@ return {
         "pyright",
       }
     },
-    max_concurrent_installers = 10,
     config = function(_,opts)
 	    require("mason").setup(opts)
 	      vim.api.nvim_create_user_command("MasonInstallAll", function()

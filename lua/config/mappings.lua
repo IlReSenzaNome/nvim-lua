@@ -36,14 +36,14 @@ map("n", ";", ":", { desc = "CMD enter command mode" })
 -------------------------------------
 -- tabufline
 -------------------------------------
-map("n", "<Tab>", "<cmd>BufferLineCycleNext<cr>", default_opts)
-map("n", "<S-tab>", "<cmd>BufferLineCyclePrev<cr>", default_opts)
+map("n", "<Tab>", "<cmd>BufferLineCycleNext<cr>", { desc = "Next Buffer"})
+map("n", "<S-tab>", "<cmd>BufferLineCyclePrev<cr>", { desc = " Prev Buffer"})
 map("n", "<leader>bd", "<cmd>bdelete<cr>", { desc = "Close buffer"})
 -------------------------------------
 -- nvim-tree
 -------------------------------------
-map("n", "<C-n>", "<cmd>NvimTreeToggle<CR>", { desc = "Nvimtree Toggle window"})
-map("n", "<leader>e", "<cmd>NvimTreeFocus<CR>", { desc = "Nivmtree Focus Window"})
+map("n", "<C-n>", "<cmd>Neotree action=close source=filesystem position=right<CR>", { desc = "Nvimtree Toggle window"})
+map("n", "<leader>e", "<cmd>Neotree source=filesystem reveal=true position=right<CR>", { desc = "Nivmtree Focus Window"})
 -------------------------------------
 -- Comments
 -------------------------------------
@@ -61,19 +61,15 @@ map(
 -------------------------------------
 -- Lazy
 -------------------------------------
-map("n", "<leader>l", "<cmd>Lazy<cr>", default_opts)
+map("n", "<leader>l", "<cmd>Lazy<cr>", { desc = "Open lazy"})
 -------------------------------------
--- Tmux
+-- Open plugins
 -------------------------------------
-map("t", "<C-x>", "<C-\\><C-N>", {desc = "Terminal Escape terminal mode"})
--- map("n", "<C-H>", "<cmd>TmuxNavigateLeft<cr>", default_opts)
--- map("n", "<C-L>", "<cmd>TmuxNavigateRight<cr>", default_opts)
--- map("n", "<C-K>", "<cmd>TmuxNavigateUp<cr>", default_opts)
--- map("n", "<C-J>", "<cmd>TmuxNavigateDown<cr>", default_opts)
+map("n", "<leader>oz", "<cmd>ZenMode<cr>", { desc = "Open ZenMode"})
 -------------------------------------
 -- Reload configuration without restart nvim
 -------------------------------------
-map("n", "<F5>", ":so %<cr>", default_opts)
+map("n", "<F5>", ":so %<cr>", {desc = "Reload configuration"})
 -------------------------------------
 -- whichkey
 -------------------------------------
@@ -89,7 +85,6 @@ map("n", "<leader>cc", function ()
   config.scope.exclude = { language = {}, node_type = {} }
   config.scope.include = { node_type = {} }
   local node = require("ibl.scope").get(vim.api.nvim_get_current_buf(), config)
-  
   if node then
     local start_row, _, end_row, _ = node:range()
     if start_row ~= end_row then

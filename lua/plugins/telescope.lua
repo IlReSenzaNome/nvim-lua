@@ -4,7 +4,6 @@ return {
       dependencies = {
         'nvim-lua/plenary.nvim',
         {"nvim-telescope/telescope-fzf-native.nvim", build = "make"},
-        "nvim-tree/nvim-web-devicons",
       },
       keys = {
         {"<leader>ff", ":Telescope find_files<cr>", desc = "Fuzzy find files in cwd" },

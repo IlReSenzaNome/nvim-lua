@@ -1,15 +1,16 @@
 return {
   "folke/which-key.nvim",
   event = "VeryLazy",
+  lazy = true, 
   init = function()
     vim.o.timeout = true
     vim.o.timeoutlen = 300
     local wk = require("which-key")
-    wk.register({}, { prefix = "<leader>o", name = "Open"})
-    wk.register({}, { prefix = "<leader>g", name = "Git"})
-    wk.register({}, { prefix = "<leader>f", name = "+Telescop"})
-    wk.register({}, { prefix = "<leader>c", name = "+Reference"})
-    wk.register({}, { prefix = "<leader>w", name = "+Keys"})
+        wk.register({
+          ["<leader>g"] = { name = " Git"},
+          ["<leader>o"] = { name = "Open"},
+          ["<leader>f"] = { name = "Telescope"},
+    })
   end,
   opts = {
     mode = "n",
@@ -21,8 +22,9 @@ return {
     expr = false,
   },
   icons = {
-    breadcrumb = "»", -- symbol used in the command line area that shows your active key combo
-    separator = "➜", -- symbol used between a key and it's label
-    group = "+", -- symbol prepended to a group
-  },
+      breadcrumb = "»", -- symbol used in the command line area that shows your active key combo
+      separator = "➜", -- symbol used between a key and it's label
+      groups = "",
+  }
+
 }
