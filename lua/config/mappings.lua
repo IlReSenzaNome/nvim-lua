@@ -30,6 +30,7 @@ map("n", "<C-k>", "<C-w>k", { desc = "Switch Window up" })
 
 map("n", "<C-s>", "<cmd>w<CR>", { desc = "File Save"})
 map("n", "<C-c>", "<cmd>%y+<CR>", { desc = "File Copy whole"})
+map("n", "<C-q>", "<cmd>wq!<CR>", { desc = "Save and close folder"})
 
 map("i", "jk", "<ESC>")
 map("n", ";", ":", { desc = "CMD enter command mode" })
