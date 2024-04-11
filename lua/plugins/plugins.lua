@@ -62,5 +62,8 @@ return {
       -- config
     }
   end,
-}
+  },
+  {
+    'tribela/vim-transparent'
+  },
 }

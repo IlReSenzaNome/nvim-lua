@@ -25,7 +25,7 @@ return {
              treesitter = true,
              which_key = true,
          },
-         style = "moom",
+         style = "storm",
          terminal_colors = true,
     },
     init = function()
